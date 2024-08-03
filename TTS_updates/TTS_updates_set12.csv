@@ -1,0 +1,45 @@
+Strategy Key,ISIN,Extracted Date from TTS DB,Extracted Date from PDF File,Days since last updated from TTS DB,Days since last updated from PDF File,Update Needed?
+319622,LU1560902808,Invalid date format in TTS DB,01/07/2024,N/A,32,N/A
+16532,LU0411150922,01/03/2019,31/03/2019,1981,1951,NO
+33214,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+599791,HK0000847258,01/06/2023,01/04/2024,428,123,YES
+599790,HK0000034162,01/06/2023,01/04/2024,428,123,YES
+602203,HK0000847274,01/06/2023,01/04/2024,428,123,YES
+599798,HK0000847266,01/06/2023,01/04/2024,428,123,YES
+66288,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+66294,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+66293,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+109205,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+66290,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+109259,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+66286,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+66287,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+66285,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+95883,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+119150,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+95882,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+95884,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+127692,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+95885,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+95886,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+119180,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+108061,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+68523,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+67923,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+68526,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+68524,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+67927,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+68522,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+109311,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+68528,N/A,01/02/2019,Date not found in the paragraph,2009,N/A,YES
+68525,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+68527,N/A,Date not found in the paragraph,Date not found in the paragraph,N/A,N/A,N/A
+45750,N/A,01/06/2020,Date not found in the paragraph,1523,N/A,YES
+45735,LU1078738645,01/06/2020,26/06/2020,1523,1498,NO
+45650,LU1078737910,01/06/2020,26/06/2020,1523,1498,NO
+45807,LU1078738306,01/06/2020,26/06/2020,1523,1498,NO
+45791,LU1078738058,01/06/2020,26/06/2020,1523,1498,NO
+45726,LU1078738488,01/06/2020,26/06/2020,1523,1498,NO
+735678,LU2572683147,01/03/2023,01/03/2024,520,154,YES
+18042,N/A,01/03/2023,Date not found in the paragraph,520,N/A,YES
+44121,LU0265266980,01/03/2023,01/03/2024,520,154,YES
