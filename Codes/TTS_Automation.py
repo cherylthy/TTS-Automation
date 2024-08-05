@@ -63,7 +63,7 @@ def scrape_dates_from_website(strategy_key):
     return results
 
 # Read the CSV file containing the strategy keys [Remember to change this when moving on to a new set]
-strategy_keys_df = pd.read_csv('strategy_keys\strategy_keys_set5.csv')  # Ensure the CSV file has a column named 'Strategy Key'
+strategy_keys_df = pd.read_csv('missing_strategy_keys.csv')  # Ensure the CSV file has a column named 'Strategy Key'
 strategy_keys = strategy_keys_df['Strategy Key'].tolist()
 
 # Create an empty list to store results
@@ -161,7 +161,7 @@ for result in results:
 
 # Create a DataFrame from the results
 df = pd.DataFrame(results)
-df.to_csv('TTS_updates_set32.csv', encoding='utf-8', index=False) #[Remember to change this when moving on to a new set]
+df.to_csv('TTS_updates_set48.csv', encoding='utf-8', index=False) #[Remember to change this when moving on to a new set]
 
 # Print the DataFrame
 print(df)

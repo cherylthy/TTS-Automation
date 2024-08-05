@@ -26,6 +26,6 @@ def concatenate_csv_files(input_folder, output_file):
 
 # Example usage
 input_folder = 'TTS_updates'  # Replace with the path to your folder containing CSV files
-output_file = 'TTS_updates1.csv'  # Replace with the desired output file name
+output_file = 'TTS_updates.csv'  # Replace with the desired output file name
 
 concatenate_csv_files(input_folder, output_file)
