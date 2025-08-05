@@ -11,7 +11,7 @@ subscription_key = "a63eb7d3d1be4ae8bec8509fbb14ddc0"
 region = "eastus"
 
 # Choose file name: "qc" or "epp"
-file_name = "qc"
+file_name = "MU_FS"
 
 # 🔀 Choose language: "en", "zh-cn", or "zh-hk"
 language_choice = "zh-hk"
@@ -20,36 +20,82 @@ language_choice = "zh-hk"
 language_config = {
     "en": {
         "qc": {
-            "file": "TTS_Loans/QC_Texts/qc_static_script_en.txt",
+            "file": "TTS-Automation/TTS_Loans/QC_Texts/qc_static_script_en.txt",
             "voice": "en-US-AriaNeural",
             "lang": "en-US"
         },
         "epp": {
-            "file": "TTS_Loans/EPP_Texts/epp_static_script_en.txt",
+            "file": "TTS-Automation/TTS_Loans/EPP_Texts/epp_static_script_en.txt",
+            "voice": "en-US-AriaNeural",
+            "lang": "en-US"
+        },
+        "MU_Plus":{ 
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_Plus_20250515_approved_ENG.txt",
+            "voice": "en-US-AriaNeural",
+            "lang": "en-US"
+        },
+        "MU_FS": {
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_FS_en.txt",
+            "voice": "en-US-AriaNeural",
+            "lang": "en-US"
+        },
+        "MU_HY": {
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_HY_en.txt",
             "voice": "en-US-AriaNeural",
             "lang": "en-US"
         }
     },
     "zh-cn": {
         "qc": {
-            "file": "TTS_Loans/QC_Texts/qc_static_script_man.txt",
+            "file": "TTS-Automation/TTS_Loans/QC_Texts/qc_static_script_man.txt",
             "voice": "zh-CN-XiaoqiuNeural",
             "lang": "zh-CN"
         },
         "epp": {
-            "file": "TTS_Loans/EPP_Texts/epp_static_script_man.txt",
+            "file": "TTS-Automation/TTS_Loans/EPP_Texts/epp_static_script_man.txt",
+            "voice": "zh-CN-XiaoqiuNeural",
+            "lang": "zh-CN"
+        },
+          "MU_Plus": {
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_Plus_20250515_approved_MAN.txt",
+            "voice": "zh-CN-XiaoqiuNeural",
+            "lang": "zh-CN"
+        },
+        "MU_FS": {
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_FS_man.txt",
+            "voice": "zh-CN-XiaoqiuNeural",
+            "lang": "zh-CN"
+        },
+        "MU_HY": {
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_HY_man.txt",
             "voice": "zh-CN-XiaoqiuNeural",
             "lang": "zh-CN"
         }
+        
     },
     "zh-hk": {
         "qc": {
-            "file": "TTS_Loans/QC_Texts/qc_static_script_can.txt",
+            "file": "TTS-Automation/TTS_Loans/QC_Texts/qc_static_script_can.txt",
             "voice": "zh-HK-HiuGaaiNeural",
             "lang": "zh-HK"
         },
         "epp": {
-            "file": "TTS_Loans/EPP_Texts/epp_static_script_can.txt",
+            "file": "TTS-Automation/TTS_Loans/EPP_Texts/epp_static_script_can.txt",
+            "voice": "zh-HK-HiuGaaiNeural",
+            "lang": "zh-HK"
+        },
+        "MU_Plus": {
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_Plus_20250515_approved_CAN.txt",
+            "voice": "zh-HK-HiuGaaiNeural",
+            "lang": "zh-HK"
+        },
+        "MU_FS": {
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_FS_can.txt",
+            "voice": "zh-HK-HiuGaaiNeural",
+            "lang": "zh-HK"
+        },
+        "MU_HY": {
+            "file": "TTS-Automation/TTS_Loans/MU_Plus_HY_FS_texts/MU_HY_can.txt",
             "voice": "zh-HK-HiuGaaiNeural",
             "lang": "zh-HK"
         }
@@ -68,14 +114,14 @@ lang_suffix = {
     "zh-cn": "man",
     "zh-hk": "can"
 }
-output_folder = os.path.join(f"{file_name}_audio_files", f"{file_name}_{lang_suffix[language_choice]}")
+output_folder = os.path.join(f"TTS-Automation\TTS_Loans\{file_name}\{file_name}_{language_choice}",f"{file_name}_audio_files", f"{file_name}_{lang_suffix[language_choice]}")
 os.makedirs(output_folder, exist_ok=True)
 
 # Load and split text
 with open(config["file"], "r", encoding="utf-8") as file:
     full_text = file.read()
 
-chunks = textwrap.wrap(full_text, 1000, break_long_words=False, replace_whitespace=False)
+chunks = textwrap.wrap(full_text, 2000, break_long_words=False, replace_whitespace=False)
 
 # Setup retry-enabled session
 session = requests.Session()

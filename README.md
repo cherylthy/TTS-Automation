@@ -11,3 +11,7 @@ The scripts would be done for the dynamic part of the audio which consists of 3 
 3. EPP 2
 
 The audio will also be generated using 3 languages being english, chinese and cantonese.
+
+<h1>TTS KFS</h1>
+
+This automation process here is to compare the list from prive and the list from the internal DB to check for any outdated funds that needs to be updated.

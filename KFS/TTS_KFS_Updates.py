@@ -2,8 +2,8 @@ import pandas as pd
 from datetime import datetime
 
 # Load both CSV files
-ecura_file_path = 'KFS\ScraperVerifyReportInternal_2025-05-05_04_14_37.csv'
-prive_file_path = 'KFS\TTS_FUNDS_20250428.csv'
+ecura_file_path = 'TTS-Automation\KFS\ScraperVerifyReportInternal_2025-05-26_07_34_08.csv'
+prive_file_path = 'TTS-Automation\KFS\TTS_FUNDS_20250512.csv'
 
 ecura_csv = pd.read_csv(ecura_file_path)
 prive_csv = pd.read_csv(prive_file_path)
@@ -49,7 +49,7 @@ def get_status(row):
     return 'Outdated'
 
 # Apply the comparison logic for status
-result_df['Status as of 07/10/2024'] = result_df.apply(get_status, axis=1)
+result_df[f'Status as of {datetime.now()}'] = result_df.apply(get_status, axis=1)
 
 # Calculate "Days since last updated in TTS DB" and "Days since last updated from PDF File"
 current_date = pd.Timestamp.now()
@@ -61,4 +61,4 @@ result_df['Days since last updated from PDF File'] = (current_date - result_df['
 print(result_df.head())
 
 # You can also save the result to a CSV file if needed
-result_df.to_csv('KFS/Updated_TTS_FUNDS_Result.csv', index=False)
+result_df.to_csv('TTS-Automation/KFS/Updated_TTS_FUNDS_Result.csv', index=False)
