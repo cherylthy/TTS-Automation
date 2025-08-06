@@ -1,0 +1,205 @@
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #f4f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.sidebar {
+    background: linear-gradient(to bottom right, #B7ACF6, #6369EC);
+    color: white;
+    width: 40%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    padding-top: 0px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-weight: 100px;
+}
+
+.sidebar label,
+.sidebar select,
+.sidebar button {
+    display: block;
+    width: 100%;
+    margin-top: 1.2rem;
+    font-size: 14px;
+}
+
+.sidebar select {
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: none;
+    width: 300px;
+    background-color: #f6f6ff;
+    font-size: 16px;
+    font-weight: 500;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%236A5AE0'%20d='M2%200L0%202h4L2%200zM2%205L0%203h4l-2%202z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+}
+
+
+.sidebar button {
+    margin-top: 2rem;
+    background-color: white;
+    color: #6A5AE0;
+    font-weight: bold;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #f1f1ff;
+}
+
+.content {
+    background-color: white;
+    width: 60%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    overflow: hidden;
+}
+
+.script-wrapper {
+    flex-grow: 1;
+    background-color: #f4f4f8;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.sidebar label {
+    align-self: flex-start;
+    font-size: 14px;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #f8f8f8;
+}
+
+.script-wrapper textarea {
+    flex-grow: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    resize: vertical;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: white;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+    min-height: 300px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.action-bar {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.action-bar button {
+    background-color: #6A5AE0;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.download-button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    background-color: #6A5AE0;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.panel-loading {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.spinner-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.circle-loader {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #e6e6e6;
+    border-top: 6px solid #6A5AE0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+

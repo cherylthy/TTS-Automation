@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TTS Loans Audio Generation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="card">
+        <div class="sidebar">
+            <h2>TTS Loans Audio Generation</h2>
+            <div class="form-wrapper">
+                <form method="post">
+                    <label>Product</label>
+                    <select name="loan_type">
+                        <option value="qc" {% if selected_loan == 'qc' %}selected{% endif %}>QC</option>
+                        <option value="epp" {% if selected_loan == 'epp' %}selected{% endif %}>EPP</option>
+                    </select>
+
+                    <label>Language</label>
+                    <select name="language">
+                        <option value="en" {% if selected_language == 'en' %}selected{% endif %}>English</option>
+                        <option value="zh-cn" {% if selected_language == 'zh-cn' %}selected{% endif %}>Chinese</option>
+                        <option value="zh-hk" {% if selected_language == 'zh-hk' %}selected{% endif %}>Cantonese</option>
+                    </select>
+
+                    <button type="submit" name="action" value="confirm">Confirm</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="content">
+            {% if show_textbox %}
+                <!-- Script Form Section -->
+                <div id="main-script-content" class="script-wrapper">
+                    <label for="script"><strong>Script</strong></label>
+                    <textarea id="script" name="script">{{ script_text }}</textarea>
+
+                    <div class="action-bar">
+                        <button id="save-btn" type="submit" name="action" value="save">Save & Process Audio</button>
+                    </div>
+                </div>
+
+                <!-- Spinner shown on button click -->
+                <div id="panel-loading" class="panel-loading">
+                    <div class="spinner-text">Generating your audio...</div>
+                    <div class="circle-loader"></div>
+                </div>
+
+            {% elif audio_file %}
+                <div class="success-wrapper">
+                    <h3>Audio Successfully Created! 🎉</h3>
+                    <a class="download-button" href="{{ url_for('static', filename='audio/' + audio_file) }}" download>Download</a>
+                </div>
+            {% else %}
+                <h3>Select your product & language</h3>
+                <p>Click “Confirm” to load the existing script for editing.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const saveBtn = document.getElementById("save-btn");
+    const loadingPanel = document.getElementById("panel-loading");
+    const mainScriptContent = document.getElementById("main-script-content");
+
+    saveBtn?.addEventListener("click", () => {
+        // Wait briefly before hiding content to let form values submit
+        setTimeout(() => {
+            loadingPanel.style.display = "flex";
+            mainScriptContent.style.display = "none";
+        }, 100);
+    });
+</script>
+
+
+</body>
+</html>

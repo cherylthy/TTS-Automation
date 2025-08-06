@@ -2,8 +2,8 @@ import pandas as pd
 from datetime import datetime
 
 # Load both CSV files
-ecura_file_path = 'TTS-Automation\KFS\ScraperVerifyReportInternal_2025-05-26_07_34_08.csv'
-prive_file_path = 'TTS-Automation\KFS\TTS_FUNDS_20250512.csv'
+ecura_file_path = 'TTS-Automation\KFS\ScraperVerifyReportInternal_2025-08-05_15_46_57.csv'
+prive_file_path = 'TTS-Automation\KFS\TTS_FUNDS_20250805.csv'
 
 ecura_csv = pd.read_csv(ecura_file_path)
 prive_csv = pd.read_csv(prive_file_path)
