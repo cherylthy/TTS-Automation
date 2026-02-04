@@ -2,8 +2,8 @@ import pandas as pd
 from datetime import datetime
 
 # Load both CSV files
-ecura_file_path = 'TTS-Automation\KFS\ScraperVerifyReportInternal_2025-08-05_15_46_57.csv'
-prive_file_path = 'TTS-Automation\KFS\TTS_FUNDS_20250805.csv'
+ecura_file_path = r'C:\Users\User\TTS Automation\TTS-Automation\KFS\ScraperVerifyReportInternal_2026-02-04_13_45_41.csv'
+prive_file_path = r'C:\Users\User\TTS Automation\TTS-Automation\KFS\TTS_FUNDS_02022026.csv'
 
 ecura_csv = pd.read_csv(ecura_file_path)
 prive_csv = pd.read_csv(prive_file_path)
@@ -61,4 +61,4 @@ result_df['Days since last updated from PDF File'] = (current_date - result_df['
 print(result_df.head())
 
 # You can also save the result to a CSV file if needed
-result_df.to_csv('TTS-Automation/KFS/Updated_TTS_FUNDS_Result.csv', index=False)
+result_df.to_csv(r'C:\Users\User\TTS Automation\TTS-Automation\KFS\Updated_TTS_FUNDS_Result.csv', index=False)
